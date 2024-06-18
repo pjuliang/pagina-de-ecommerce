@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./rsc/images/favicon-32x32.png">
+  <title>Frontend Mentor | E-commerce product page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./rsc/css/styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+      <img src="./rsc/images/logo.svg" alt="Logo">
+    </div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="#">Collections</a></li>
+        <li><a href="#">Men</a></li>
+        <li><a href="#">Women</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="user-actions">
+      <div class="cart-icon">
+        <img src="./rsc/images/icon-cart.svg" alt="Cart"> <span>(0)</span>
+      </div>
+      <div class="avatar">
+        <img src="./rsc/images/image-avatar.png" alt="User Avatar">
+      </div>
+    </div>
+  </header>
+
+  <main class="product-page">
+    <section class="product-gallery">
+      <div class="main-image-container">
+        <img src="./rsc/images/image-product-1.jpg" alt="Main Product Image" class="main-image" onclick="openLightbox(this.src)">
+      </div>
+      <div class="thumbnails">
+        <img src="./rsc/images/image-product-1.jpg" alt="Product Thumbnail 1" class="thumbnail" onclick="openLightbox(this.src)">
+        <img src="./rsc/images/image-product-2.jpg" alt="Product Thumbnail 2" class="thumbnail" onclick="openLightbox(this.src)">
+        <img src="./rsc/images/image-product-3.jpg" alt="Product Thumbnail 3" class="thumbnail" onclick="openLightbox(this.src)">
+        <img src="./rsc/images/image-product-4.jpg" alt="Product Thumbnail 4" class="thumbnail" onclick="openLightbox(this.src)">
+      </div>
+    </section>
+
+    <section class="product-details">
+      <h1>Fall Limited Edition Sneakers</h1>
+      <p class="description">
+        These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.
+      </p>
+      <p class="price">
+        $125.00 <span class="discount">50%</span>
+        <span class="original-price">$250.00</span>
+      </p>
+      <div class="cart-actions">
+        <input type="number" value="0" class="quantity">
+        <button class="add-to-cart">Add to cart</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <img class="lightbox-content" id="lightboxImage">
+    <a class="prev" onclick="changeImage(-1)">&#10094;</a>
+    <a class="next" onclick="changeImage(1)">&#10095;</a>
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Pablo Julian Gargarella</a>.
+  </div>
+
+  <script src="./rsc/css/index.js"></script>
+</body>
+</html>
